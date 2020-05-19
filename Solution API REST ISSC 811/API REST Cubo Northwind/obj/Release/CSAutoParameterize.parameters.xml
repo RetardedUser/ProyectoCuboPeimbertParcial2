@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CuboNorhtwind-Web.config Connection String" description="CuboNorhtwind Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=localhost;Catalog=CuboNorthwindISSC" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Alexis\ Ah\\source\\repos\\Solution\ API\ REST\ ISSC\ 811\\API\ REST\ Cubo\ Northwind\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CuboNorhtwind']/@connectionString" />
+  </parameter>
+  <parameter name="CuboNorhtwind2-Web.config Connection String" description="CuboNorhtwind2 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=localhost;Catalog=CuboProyectoNorthwind" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Alexis\ Ah\\source\\repos\\Solution\ API\ REST\ ISSC\ 811\\API\ REST\ Cubo\ Northwind\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CuboNorhtwind2']/@connectionString" />
+  </parameter>
+</parameters>
