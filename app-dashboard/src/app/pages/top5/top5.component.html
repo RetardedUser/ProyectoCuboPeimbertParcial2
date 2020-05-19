@@ -1,0 +1,57 @@
+<ng-select class="m-4"
+           [items]="defaultBindingsList"
+           [clearable]="false"
+           (change)="onChangeDimension($event)"
+           [(ngModel)]="selectedDimension">
+</ng-select>
+
+<p class="m-4">Select multiple elements</p>
+
+<ng-select class="m-4"
+    [items]="customer$ | async"
+    [multiple]="true"
+    [closeOnSelect]="false"
+    [searchable]="false"
+    placeholder="Seleccione un Cliente ...."
+    (change)="onChangeValues()"
+    [(ngModel)]="selectedCustomer">
+</ng-select>
+<ng-select class="m-4"
+    [items]="years$ | async"
+    [multiple]="true"
+    [closeOnSelect]="false"
+    [searchable]="false"
+    placeholder="Seleccione un Año ...."
+    (change)="onChangeAnnio()"
+    [(ngModel)]="selectedAnnio">
+</ng-select>
+<ng-select class="m-4"
+    [items]="meses$ | async"
+    [multiple]="true"
+    [closeOnSelect]="false"
+    [searchable]="false"
+    placeholder="Seleccione un Mes ...."
+    (change)="onChangeMes()"
+    [(ngModel)]="selectedMes">
+</ng-select>
+<div class="mt-3 m-4">
+    Selected value: <br/>
+    <ul>
+        <li *ngFor="let item of selectedCustomer">{{item}}</li>
+    </ul>
+    Selected value: <br/>
+    <ul>
+        <li *ngFor="let item of selectedAnnio">{{item}}</li>
+    </ul>
+    Selected value: <br/>
+    <ul>
+        <li *ngFor="let item of selectedMes">{{item}}</li>
+    </ul>
+    <button (click)="clearModel()" class="btn btn-secondary btn-sm">Clear Model</button>
+</div>
+
+<app-pie-chart
+    [pieChartLabels]="dataDimension"
+    [pieChartData]="dataValues"
+>
+</app-pie-chart>
